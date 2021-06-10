@@ -1,8 +1,6 @@
 """
 Author Omar Mohamed
-ID: 3055058
-Assignment 5
-CMPT 200 X04L"""
+"""
 
 class Shipyard:
     class Container:
