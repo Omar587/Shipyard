@@ -1,2 +1,3 @@
 # Shipyard
-Shipping container management system implemented in nested Linked list, it handles logic for shipyard operations and ships packages to customers.
+
+An application that runs in the console, python 3 is needed. 
