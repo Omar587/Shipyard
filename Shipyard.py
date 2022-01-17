@@ -519,78 +519,7 @@ class Empty(Exception):
     pass
 
 
-def test():
-    """Test function that displays all required methods. Assumption made, if a package
-    or container is not in the system. The methods will return None and do nothing.
-    status will be displayed only if the item is there. Since the specs didn't ask for it."""
-    s= Shipyard()
-    
-    s.add("tony", "Mexico", 221)
-    s.add("lilly", "Mexico", 323)          
-    s.add("Tom", "Brazil", 293)
-    s.add("Rob", "Brazil", 192)
-    s.add("Bill", "Alberta", 34)
-    s.add("sally", "Alberta", 34)
-    s.add("chuck", "Alberta", 23)
-    s.add("mike", "Alberta", 323)
-    s.add("Ali", "Ghana", 45)
-    s.add("mike", "Ny", 582)
-    s.add("bob", "Spain", 1932)
-    s.add("molly", "Spain", 120)
-    s.add("rick", "Spain", 1900)
-  
-    
-    """prints the id weight destination and owner. The packkages are ordered from 
-    smallest to largest. The containers are in alphabetical order"""    
-    
-    s.printAll()
-    print()
-    print("**Next Test print container information **" )
-    print()
-    s.printContainers()  
-    print()
-    print("**Next Test search by id**")
-    print()
-    s.search_by_id(13163)
-    print()
-    print("**Next Test print destination for Mexico**")
-    print()
-    s.printDest("Mexico")
-    print()
-    print("** Next Test search by owner destination and weight")
-    print()
-    s.search("molly", "Spain", 120)
-    print()
-    print("**Next Test remove by id. Id 16387 will be removed from the Alberta container")
-    print("**Print packages in the Alberta Container after removal** ")
-    print()
-    #To see if the id has been removed we must print out the shipyard manifest again
-    #as you can see the package was removed and is no longer in the container Alberta.
-    s.remove_by_id(16387)
-    s.printDest("Alberta")
-    print()
-    print("**Next Test remove by owner destination weight lets remove (Tom, Brazil, 293)**")
-    print("**Print packages in the Brazil container after removal** ")
-    s.remove("Tom", "Brazil", 293)
-    #once again print the shipyard manifest to confirm if the package has been removed
-    print()
-    s.printDest("Brazil")
-    #note that the weight of the containers decreased when the package is removed
-    #also the remove method displays it can remove a Package from anywhere in the list
-    #front behind or middle
-    print()
-    print("**Next Test ship out the containers. Containers spain will be removed**")
-    print("**Containers and packages remaining after removals** ")
-    print()
-    #we initially had 3 containers going to spain. With the ship method all three
-    #of the containers are shipped out and removed from the shipyard. The total
-    #weight shipped is added.
-    s.ship("Spain")
-    print()
-    s.printAll()
-    print()
-    
-  
+
 
    
 def main():
